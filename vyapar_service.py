@@ -10,7 +10,7 @@ import requests
 
 class VyaparAPIService:
     def __init__(self):
-        self.BASE_URL = "https://staging.vyaparapp.in/api/ns/public/"
+        self.BASE_URL = ""
         self.HEADERS = {
             "x-vendor": "RUPYZ",
             "x-api-version": "1",
@@ -18,7 +18,7 @@ class VyaparAPIService:
         }
 
     def _add_auth_headers(self, payload):
-        api_key = "VYAPAR_STAGING_224abc40-de2d-441d-afec-754e4edd3ce1"
+        api_key = ""
         vendor = "RUPYZ"
         timestamp = str(int(time.time() * 1000))
         req_body = json.dumps(payload, separators=(",", ":"))
